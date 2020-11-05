@@ -12,6 +12,7 @@
                 "90CAF9" : "130C2B"
             document.getElementById("theme_selector").checked = localStorage.getItem("theme") !== "light";
         }
+
         function set_theme() {
             localStorage.setItem("theme", document.getElementById("theme_selector").checked ? "dark" : "light");
             document.getElementsByTagName("body")[0].style.backgroundColor = localStorage.getItem("theme") === "light" ?
@@ -26,6 +27,19 @@
         span.card-title {
             font-weight: bold;
         }
+
+        div.title-row {
+            height: 200px;
+            align-items: center;
+        }
+
+        div.title-row > div {
+        }
+
+        div.title-row > div > img {
+            height: 100px;
+            align-self: center;
+        }
     </style>
 </head>
 <body onload="M.AutoInit(); theme()" class="white-text">
@@ -39,8 +53,15 @@
     </div>
 </nav>
 <br>
-
-<footer class="black-text row ">
+<div class="purple darken-4 title-row row valign-wrapper section">
+    <div class="col s2 right-align">
+        <img src="assets/aoi.jpeg" alt="Aoi" class="circle">
+    </div>
+    <div class="col s10 valign-wrapper">
+        Aoi hihi
+    </div>
+</div>
+<footer class="black-text row">
     <div class="cols s6 left-align"></div>
     <div class="cols s6 right-align switch">
         <label class="black-text">
