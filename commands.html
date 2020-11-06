@@ -12,6 +12,7 @@
                 "90CAF9" : "130C2B"
             document.getElementById("theme_selector").checked = localStorage.getItem("theme") !== "light";
         }
+
         function set_theme() {
             localStorage.setItem("theme", document.getElementById("theme_selector").checked ? "dark" : "light");
             document.getElementsByTagName("body")[0].style.backgroundColor = localStorage.getItem("theme") === "light" ?
@@ -61,6 +62,7 @@
                     <li class="tab white-text fill"><a href="#Permissions" class="white-text">Permissions</a></li>
                     <li class="tab white-text fill"><a href="#WelcomeGoodbye" class="white-text">WelcomeGoodbye</a></li>
                     <li class="tab white-text fill"><a href="#ReactionRoles" class="white-text">ReactionRoles</a></li>
+                    <li class="tab white-text fill"><a href="#Users" class="white-text">Users</a></li>
                 </ul>
                 <div id=Aoi class='fill'>
                     <div class='card purple darken-4'>
@@ -101,7 +103,7 @@
                         <div class='card-content white-text'><span class='card-title'>commandstats</span>
                             <p>Show most used commands<br>Usage: <code>,commandstats </code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Channels class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Channels</span>
@@ -173,7 +175,7 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Guilds class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Guilds</span>
@@ -206,7 +208,7 @@
                             <p>Deletes up to 10 emojis<br>Aliases: <code>de</code><br>Usage: <code>,delemoji
                                 emojis</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Information class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Information</span>
@@ -269,7 +271,7 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Permissions class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Permissions</span>
@@ -311,14 +313,14 @@
                             <p>Disable or enable a module server-wide<br>Aliases: <code>sm</code><br>Usage: <code>,svrmdl
                                 module enabled</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=ReactionRoles class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>ReactionRoles</span>
                             <p>Commands to manage reaction roles</p></div>
                     </div>
                     <hr/>
-                    </ul></div>
+                </div>
                 <div id=Roles class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Roles</span>
@@ -423,7 +425,7 @@
                         <div class='card-content white-text'><span class='card-title'>colorroles</span>
                             <p>Creates color roles<br>Usage: <code>,colorroles </code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=TaskManagement class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>TaskManagement</span>
@@ -447,7 +449,18 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul></div>
+                </div>
+                <div id=Users class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Users</span>
+                            <p>Commands to manage users</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>setnick</span>
+                            <p>Set a member's nickname<br>Usage: <code>,setnick member nickname</code></p></div>
+                    </div>
+                </div>
                 <div id=WelcomeGoodbye class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>WelcomeGoodbye</span>
@@ -490,7 +503,7 @@
                             <p>Set the deletion delay for the welcome message, 0 to disable<br>Usage: <code>,joinmsgdel
                                 secs</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
             </div>
             <div id="Misc" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
@@ -502,6 +515,7 @@
                     <li class="tab white-text fill"><a href="#Frames" class="white-text">Frames</a></li>
                     <li class="tab white-text fill"><a href="#Nasa" class="white-text">Nasa</a></li>
                     <li class="tab white-text fill"><a href="#Geolocation" class="white-text">Geolocation</a></li>
+                    <li class="tab white-text fill"><a href="#Fun" class="white-text">Fun</a></li>
                 </ul>
                 <div id=Colors class='fill'>
                     <div class='card purple darken-4'>
@@ -572,7 +586,7 @@
                         <div class='card-content white-text'><span class='card-title'>histogram</span>
                             <p>Shows an image histogram<br>Usage: <code>,histogram </code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Frames class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Frames</span>
@@ -596,7 +610,22 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul></div>
+                </div>
+                <div id=Fun class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Fun</span>
+                            <p>Fun! :D</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>simp</span>
+                            <p>Hehe simp<br>Usage: <code>,simp &lt;member&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>member</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                </div>
                 <div id=Geolocation class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Geolocation</span>
@@ -608,7 +637,7 @@
                             <p>Get basic geolocation data on an address<br>Usage: <code>,geolookup address</code></p>
                         </div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Math class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Math</span>
@@ -643,7 +672,7 @@
                         <div class='card-content white-text'><span class='card-title'>latex</span>
                             <p>Render LaTeX<br>Usage: <code>,latex formula</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Messages class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Messages</span>
@@ -665,7 +694,7 @@
                             <p>Send a message with Aoi. Use [this site](https://eb.nadeko.bot/) to make the embed.<br>Usage:
                                 <code>,say msg</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=NSFW class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>NSFW</span>
@@ -676,7 +705,7 @@
                         <div class='card-content white-text'><span class='card-title'>gelbooru</span>
                             <p>Find a random gelbooru post by tag<br>Usage: <code>,gelbooru tags</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Nasa class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Nasa</span>
@@ -700,7 +729,7 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Searches class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Searches</span>
@@ -716,7 +745,7 @@
                         <div class='card-content white-text'><span class='card-title'>pixiv</span>
                             <p>Search for a tag on Pixiv<br>Usage: <code>,pixiv tag</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
             </div>
             <div id="Profile_Currency" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
@@ -746,7 +775,7 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=GlobalShop class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>GlobalShop</span>
@@ -777,7 +806,7 @@
                         <div class='card-content white-text'><span class='card-title'>equiptitle</span>
                             <p>Equip a title<br>Usage: <code>,equiptitle num</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Profile class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Profile</span>
@@ -797,7 +826,7 @@
                             <p>Change your profile card for $7500 (global)<br>Usage: <code>,profilecard url</code></p>
                         </div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=ServerGambling class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>ServerGambling</span>
@@ -829,7 +858,7 @@
                             <p>100 - 10x bet, >90 - x4 bet, >66 - x2 bet<br>Aliases: <code>br</code><br>Usage: <code>,betroll
                                 bet</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=ServerShop class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>ServerShop</span>
@@ -864,7 +893,7 @@
                         <div class='card-content white-text'><span class='card-title'>award</span>
                             <p>Award or take server currency.<br>Usage: <code>,award member amount</code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=XP class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>XP</span>
@@ -915,7 +944,7 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul></div>
+                </div>
             </div>
             <div id="Utility_Config" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
@@ -937,7 +966,7 @@
                         <div class='card-content white-text'><span class='card-title'>currencyguide</span>
                             <p>Shows the currency guide<br>Usage: <code>,currencyguide </code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=GuildSettings class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>GuildSettings</span>
@@ -956,7 +985,7 @@
                         <div class='card-content white-text'><span class='card-title'>configs</span>
                             <p>Lists current configs for the server.<br>Usage: <code>,configs </code></p></div>
                     </div>
-                    </ul></div>
+                </div>
                 <div id=Help class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Help</span>
@@ -982,9 +1011,10 @@
                             </ul>
                             </p></div>
                     </div>
-                    </ul>
                 </div>
             </div>
+        </div>
+        <div>
         </div>
     </div>
 </div>
