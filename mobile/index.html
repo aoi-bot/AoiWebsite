@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>Aoi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function theme() {
+            if (!localStorage.getItem("theme")) {
+                localStorage.setItem("theme", "light")
+            }
+            document.getElementsByTagName("body")[0].style.backgroundColor = localStorage.getItem("theme") === "light" ?
+                "90CAF9" : "130C2B"
+            document.getElementById("theme_selector").checked = localStorage.getItem("theme") !== "light";
+        }
+
+        function set_theme() {
+            localStorage.setItem("theme", document.getElementById("theme_selector").checked ? "dark" : "light");
+            document.getElementsByTagName("body")[0].style.backgroundColor = localStorage.getItem("theme") === "light" ?
+                "90CAF9" : "130C2B"
+        }
+    </script>
+    <style>
+        div.fill {
+            width: 100% !important;
+        }
+
+        span.card-title {
+            font-weight: bold;
+        }
+
+        div.title-row {
+            height: 200px;
+            align-items: center;
+        }
+
+        div.title-row > div {
+            object-fit: contain;
+        }
+
+        div.title-row > div > img {
+            max-width: 100%;
+            max-height: 100%;
+            align-self: center;
+            display: block;
+        }
+
+        div.title-row {
+            border-radius: 50px;
+            padding: 40px;
+        }
+
+        div.title-row > div:first-child.col.s10 {
+            align-items: end !important;
+            align-content: end !important;
+            text-align: end !important;
+            float: right !important;
+            display: flex;
+            justify-content: right;
+        }
+
+        div.title-row > div > a {
+            margin: 5px;
+            width: 100%;
+        }
+
+        .no-override-height {
+            height: unset !important;
+        }
+    </style>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="M.AutoInit(); theme()" class="white-text">
+<nav class="deep-purple darken-4">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo left">Aoi</a>
+        <ul id="nav-mobile" class="hide-on-med-and-low right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="commands.html">Commands</a></li>
+        </ul>
+    </div>
+</nav>
+<br/><br/>
+<div class="container">
+    <div class="purple darken-4 title-row row valign-wrapper section aoi hoverable">
+        <div class="col s2 right-align">
+            <img src="assets/aoi.jpeg" alt="Aoi" class="circle">
+        </div>
+        <div class="col s10 valign-wrapper">
+            askjljdaklsdkjkldajslkjdasdkas
+            Aoi is a brand-new bot, customizable enough to fit in any server.<br>
+
+            Look up information on a user, role, or server. Do math, render LaTeX. Make color palettes randomly or from
+            an
+            image, have server money to get roles, use global money to buy a fancy background for your profile card, and
+            more coming soon!<br>
+
+            Make use of the fine-grained permissions to control where/how Aoi can be used. Manage your server,
+            give everyone a role. Color roles according to a gradient (looking at you, aesthetic server owners).
+        </div>
+    </div>
+    <div class="deep-purple darken-4 title-row row valign-wrapper section aoi hoverable">
+        <div class="col s10 valign-wrapper">
+            Customizable configs for server owners. Make Aoi fit your server!
+        </div>
+        <div class="col s2">
+            <img src="assets/samples/configs.png" alt="Aoi">
+        </div>
+    </div>
+    <div class="purple darken-4 title-row row valign-wrapper section aoi hoverable">
+        <div class="col s2">
+            <a class="btn black"
+               href="https://discord.com/oauth2/authorize?client_id=738856230994313228&permissions=268659776&scope=bot">Invite</a>
+            <a class="btn blue-grey" href="https://discord.gg/pCgEj8t">Discord</a>
+            <a class="btn gray darken-3" href="https://github.com/aoi-bot/Aoi">GitHub</a>
+            <a class="btn green darken-3" href="https://app.gitkraken.com/glo/board/X0GTHiQxbQAR56zP">Project Board</a>
+        </div>
+        <div class="col s10">
+            Invite Aoi to your server, join the support Discord, or view the code and project boards.
+        </div>
+    </div>
+    <div class="deep-purple darken-4 title-row row valign-wrapper section aoi hoverable no-override-height">
+        <div class="col s6 valign-wrapper">
+            Customizable currency generation for server shops, and global currency for customization. Level up with
+            chat XP and get to the top of the leaderboard!
+        </div>
+        <div class="col s6">
+            <div class="row">
+                <div class="col s6">
+                    <img src="assets/samples/wallet.png" alt="Aoi" style="height: 120px">
+                    <img src="assets/samples/gxp.png" alt="Aoi" style="height: 172px;">
+                </div>
+                <div class="col s6">
+                    <img src="assets/samples/profile.png" alt="Aoi" style="height: 300px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="black-text row">
+    <div class="cols s6 left-align"></div>
+    <div class="cols s6 right-align switch">
+        <label class="black-text">
+            Dark Theme
+            <input type="checkbox" id="theme_selector" onchange="set_theme()">
+            <span class="lever"></span>
+        </label>
+    </div>
+</footer>
+</body>
+</html>
+        
