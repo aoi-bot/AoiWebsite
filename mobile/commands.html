@@ -40,11 +40,13 @@
     </div>
 </nav>
 
+
 </br>
 <div class="container">
     <div class="row">
         <div class="col s12">
             <ul class="tabs deep-purple darken-4 white-text center-align fill">
+                <li class="tab white-text fill"><a href="#ServerManagement" class="white-text">ServerManagement</a></li>
                 <li class="tab white-text fill"><a href="#Administration" class="white-text">Administration</a></li>
                 <li class="tab white-text fill"><a href="#Misc" class="white-text">Misc</a></li>
                 <li class="tab white-text fill"><a href="#Profile_Currency" class="white-text">Profile/Currency</a></li>
@@ -52,59 +54,13 @@
             </ul>
         </div>
         <div class="col s12">
-            <div id="Administration" class='fill'>
+            <div id="ServerManagement" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
-                    <li class="tab white-text fill"><a href="#Aoi" class="white-text">Aoi</a></li>
-                    <li class="tab white-text fill"><a href="#Information" class="white-text">Information</a></li>
                     <li class="tab white-text fill"><a href="#Roles" class="white-text">Roles</a></li>
                     <li class="tab white-text fill"><a href="#Channels" class="white-text">Channels</a></li>
-                    <li class="tab white-text fill"><a href="#Guilds" class="white-text">Guilds</a></li>
-                    <li class="tab white-text fill"><a href="#TaskManagement" class="white-text">TaskManagement</a></li>
                     <li class="tab white-text fill"><a href="#Permissions" class="white-text">Permissions</a></li>
                     <li class="tab white-text fill"><a href="#WelcomeGoodbye" class="white-text">WelcomeGoodbye</a></li>
-                    <!--<li class="tab white-text fill"><a href="#ReactionRoles" class="white-text">ReactionRoles</a></li>-->
-                    <li class="tab white-text fill"><a href="#Users" class="white-text">Users</a></li>
                 </ul>
-                <div id=Aoi class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Aoi</span>
-                            <p>Commands having to do with the bot herself</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>stats</span>
-                            <p>Shows bot stats<br>Usage: <code>,stats </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>invite</span>
-                            <p>Gives a link to invite Aoi to your server<br>Usage: <code>,invite </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>ping</span>
-                            <p>Shows Aoi's latency to discord<br>Usage: <code>,ping </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>die</span>
-                            <p>Log AOI out<br>Usage: <code>,die </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>flush</span>
-                            <p>Flush XP/Currency to database manually<br>Usage: <code>,flush </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>guildlist</span>
-                            <p>List servers this server is part of<br>Usage: <code>,guildlist </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>guildinfo</span>
-                            <p>Basic information about a server the bot is on<br>Usage: <code>,guildinfo guild</code>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>commandstats</span>
-                            <p>Show most used commands<br>Usage: <code>,commandstats </code></p></div>
-                    </div>
-                </div>
                 <div id=Channels class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Channels</span>
@@ -177,102 +133,6 @@
                             </p></div>
                     </div>
                 </div>
-                <div id=Guilds class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Guilds</span>
-                            <p>Commands for managing servers</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>renameserver</span>
-                            <p>Renames the server<br>Aliases: <code>guildnm</code>&emsp;<code>servernm</code><br>Usage:
-                                <code>,renameserver name</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>serveravatar</span>
-                            <p>Sets the server's icon<br>Aliases:
-                                <code>guildav</code>&emsp;<code>serverav</code>&emsp;<code>servericon</code><br>Usage:
-                                <code>,serveravatar url</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>serverregion</span>
-                            <p>Sets the server's voice region<br>Aliases:
-                                <code>guildreg</code>&emsp;<code>serverreg</code><br>Usage: <code>,serverregion
-                                    region</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>regions</span>
-                            <p>List of regions the server can use<br>Usage: <code>,regions </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>delemoji</span>
-                            <p>Deletes up to 10 emojis<br>Aliases: <code>de</code><br>Usage: <code>,delemoji
-                                emojis</code></p></div>
-                    </div>
-                </div>
-                <div id=Information class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Information</span>
-                            <p>Get information about parts of your server</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>info</span>
-                            <p>Shows info on a channel, role, member, emoji, or message<br>Usage: <code>,info obj</code>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>userinfo</span>
-                            <p>Shows info on a user<br>Aliases: <code>uinfo</code><br>Usage: <code>,userinfo &lt;member&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>member</code> = None</li>
-                            </ul>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>serverinfo</span>
-                            <p>Shows info on the current server<br>Aliases: <code>sinfo</code><br>Usage: <code>,serverinfo </code>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>roleinfo</span>
-                            <p>Shows info on a role<br>Aliases: <code>rinfo</code><br>Usage: <code>,roleinfo role</code>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>menroles</span>
-                            <p>Shows mentionable roles<br>Usage: <code>,menroles </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>voiceinfo</span>
-                            <p>Shows info on a voice channel<br>Aliases: <code>vinfo</code><br>Usage: <code>,voiceinfo
-                                channel</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>textinfo</span>
-                            <p>Shows info on a text channel<br>Aliases: <code>tcinfo</code><br>Usage: <code>,textinfo
-                                channel</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>emojiinfo</span>
-                            <p>Shows info on an emoji<br>Aliases: <code>einfo</code><br>Usage: <code>,emojiinfo
-                                emoji</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>emojis</span>
-                            <p>Shows the server's emojis<br>Usage: <code>,emojis </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>permissions</span>
-                            <p>Shows your or a member's permissions in a channel<br>Aliases: <code>perms</code><br>Usage:
-                                <code>,permissions &lt;member&gt; &lt;channel&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>member</code> = None</li>
-                                <li style='margin-top:-1px'><code>channel</code> = None</li>
-                            </ul>
-                            </p></div>
-                    </div>
-                </div>
                 <div id=Permissions class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Permissions</span>
@@ -315,15 +175,6 @@
                                 module enabled</code></p></div>
                     </div>
                 </div>
-                <!--
-                <div id=ReactionRoles class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>ReactionRoles</span>
-                            <p>Commands to manage reaction roles</p></div>
-                    </div>
-                    <hr/>
-                </div>
-                -->
                 <div id=Roles class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Roles</span>
@@ -429,41 +280,6 @@
                             <p>Creates color roles<br>Usage: <code>,colorroles </code></p></div>
                     </div>
                 </div>
-                <div id=TaskManagement class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>TaskManagement</span>
-                            <p>Manage your running tasks</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>mytasks</span>
-                            <p>List your active tasks<br>Usage: <code>,mytasks </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>longtask</span>
-                            <p>Starts a long task<br>Usage: <code>,longtask </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>stoptask</span>
-                            <p>Stops an active task. Defaults to previous task<br>Usage: <code>,stoptask
-                                &lt;num&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>num</code> = -1</li>
-                            </ul>
-                            </p></div>
-                    </div>
-                </div>
-                <div id=Users class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Users</span>
-                            <p>Commands to manage users</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>setnick</span>
-                            <p>Set a member's nickname<br>Usage: <code>,setnick member nickname</code></p></div>
-                    </div>
-                </div>
                 <div id=WelcomeGoodbye class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>WelcomeGoodbye</span>
@@ -505,6 +321,206 @@
                         <div class='card-content white-text'><span class='card-title'>joinmsgdel</span>
                             <p>Set the deletion delay for the welcome message, 0 to disable<br>Usage: <code>,joinmsgdel
                                 secs</code></p></div>
+                    </div>
+                </div>
+            </div>
+            <div id="Administration" class='fill'>
+                <ul class="tabs deep-purple darken-4 white-text center-align fill">
+                    <li class="tab white-text fill"><a href="#Aoi" class="white-text">Aoi</a></li>
+                    <li class="tab white-text fill"><a href="#Information" class="white-text">Information</a></li>
+                    <li class="tab white-text fill"><a href="#Guilds" class="white-text">Guilds</a></li>
+                    <li class="tab white-text fill"><a href="#TaskManagement" class="white-text">TaskManagement</a></li>
+                    <li class="tab white-text fill"><a href="#Users" class="white-text">Users</a></li>
+                    <li class="tab white-text fill"><a href="#GuildSettings" class="white-text">GuildSettings</a></li>
+                </ul>
+                <div id=Aoi class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Aoi</span>
+                            <p>Commands having to do with the bot herself</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>stats</span>
+                            <p>Shows bot stats<br>Usage: <code>,stats </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>invite</span>
+                            <p>Gives a link to invite Aoi to your server<br>Usage: <code>,invite </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>ping</span>
+                            <p>Shows Aoi's latency to discord<br>Usage: <code>,ping </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>die</span>
+                            <p>Log AOI out<br>Usage: <code>,die </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>flush</span>
+                            <p>Flush XP/Currency to database manually<br>Usage: <code>,flush </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>guildlist</span>
+                            <p>List servers this server is part of<br>Usage: <code>,guildlist </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>guildinfo</span>
+                            <p>Basic information about a server the bot is on<br>Usage: <code>,guildinfo guild</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>commandstats</span>
+                            <p>Show most used commands<br>Usage: <code>,commandstats </code></p></div>
+                    </div>
+                </div>
+                <div id=GuildSettings class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>GuildSettings</span>
+                            <p>Change and view Aoi's configuration in your server</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>prefix</span>
+                            <p>Set Aoi's prefix<br>Usage: <code>,prefix prefix</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>config</span>
+                            <p>Set server config<br>Usage: <code>,config setting value</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>configs</span>
+                            <p>Lists current configs for the server.<br>Usage: <code>,configs </code></p></div>
+                    </div>
+                </div>
+                <div id=Guilds class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Guilds</span>
+                            <p>Commands for managing servers</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>renameserver</span>
+                            <p>Renames the server<br>Aliases: <code>guildnm</code>&emsp;<code>servernm</code><br>Usage:
+                                <code>,renameserver name</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>serveravatar</span>
+                            <p>Sets the server's icon<br>Aliases:
+                                <code>guildav</code>&emsp;<code>serverav</code>&emsp;<code>servericon</code><br>Usage:
+                                <code>,serveravatar url</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>serverregion</span>
+                            <p>Sets the server's voice region<br>Aliases:
+                                <code>guildreg</code>&emsp;<code>serverreg</code><br>Usage: <code>,serverregion
+                                    region</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>regions</span>
+                            <p>List of regions the server can use<br>Usage: <code>,regions </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>delemoji</span>
+                            <p>Deletes up to 10 emojis<br>Aliases: <code>de</code><br>Usage: <code>,delemoji
+                                emojis</code></p></div>
+                    </div>
+                </div>
+                <div id=Information class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Information</span>
+                            <p>Get information about parts of your server</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>info</span>
+                            <p>Shows info on a channel, role, member, emoji, or message<br>Usage: <code>,info obj</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>userinfo</span>
+                            <p>Shows info on a user<br>Aliases: <code>uinfo</code><br>Usage: <code>,userinfo &lt;member&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>member</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>serverinfo</span>
+                            <p>Shows info on the current server<br>Aliases: <code>sinfo</code><br>Usage: <code>,serverinfo </code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>roleinfo</span>
+                            <p>Shows info on a role<br>Aliases: <code>rinfo</code><br>Usage: <code>,roleinfo role</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>menroles</span>
+                            <p>Shows mentionable roles<br>Usage: <code>,menroles </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>voiceinfo</span>
+                            <p>Shows info on a voice channel<br>Aliases: <code>vinfo</code><br>Usage: <code>,voiceinfo
+                                channel</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>textinfo</span>
+                            <p>Shows info on a text channel<br>Aliases: <code>tcinfo</code><br>Usage: <code>,textinfo
+                                channel</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>emojiinfo</span>
+                            <p>Shows info on an emoji<br>Aliases: <code>einfo</code><br>Usage: <code>,emojiinfo
+                                emoji</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>emojis</span>
+                            <p>Shows the server's emojis<br>Usage: <code>,emojis </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>permissions</span>
+                            <p>Shows your or a member's permissions in a channel<br>Aliases: <code>perms</code><br>Usage:
+                                <code>,permissions &lt;member&gt; &lt;channel&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>member</code> = None</li>
+                                <li style='margin-top:-1px'><code>channel</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                </div>
+                <div id=TaskManagement class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>TaskManagement</span>
+                            <p>Manage your running tasks</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>mytasks</span>
+                            <p>List your active tasks<br>Usage: <code>,mytasks </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>longtask</span>
+                            <p>Starts a long task<br>Usage: <code>,longtask </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>stoptask</span>
+                            <p>Stops an active task. Defaults to previous task<br>Usage: <code>,stoptask
+                                &lt;num&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>num</code> = -1</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                </div>
+                <div id=Users class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Users</span>
+                            <p>Commands to manage users</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>setnick</span>
+                            <p>Set a member's nickname<br>Usage: <code>,setnick member nickname</code></p></div>
                     </div>
                 </div>
             </div>
@@ -620,6 +636,18 @@
                             <p>Fun! :D</p></div>
                     </div>
                     <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>minesweeper</span>
+                            <p>Makes a discord minesweeper game<br>Usage: <code>,minesweeper &lt;height&gt; &lt;width&gt;
+                                &lt;bombs&gt; &lt;flags&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>height</code> = 10</li>
+                                <li style='margin-top:-1px'><code>width</code> = 10</li>
+                                <li style='margin-top:-1px'><code>bombs</code> = 10</li>
+                                <li style='margin-top:-1px'><code>flags</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>simp</span>
                             <p>Hehe simp<br>Usage: <code>,simp &lt;member&gt;</code><br>Defaults:
@@ -951,7 +979,6 @@
             </div>
             <div id="Utility_Config" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
-                    <li class="tab white-text fill"><a href="#GuildSettings" class="white-text">GuildSettings</a></li>
                     <li class="tab white-text fill"><a href="#Help" class="white-text">Help</a></li>
                     <li class="tab white-text fill"><a href="#Guides" class="white-text">Guides</a></li>
                 </ul>
@@ -968,25 +995,6 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>currencyguide</span>
                             <p>Shows the currency guide<br>Usage: <code>,currencyguide </code></p></div>
-                    </div>
-                </div>
-                <div id=GuildSettings class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>GuildSettings</span>
-                            <p>Change and view Aoi's configuration in your server</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>prefix</span>
-                            <p>Set Aoi's prefix<br>Usage: <code>,prefix prefix</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>config</span>
-                            <p>Set server config<br>Usage: <code>,config setting value</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>configs</span>
-                            <p>Lists current configs for the server.<br>Usage: <code>,configs </code></p></div>
                     </div>
                 </div>
                 <div id=Help class='fill'>
@@ -1018,8 +1026,6 @@
             </div>
         </div>
     </div>
-</div>
-<div>
 </div>
 
 
