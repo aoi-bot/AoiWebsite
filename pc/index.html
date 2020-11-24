@@ -66,6 +66,15 @@
         .no-override-height {
             height: unset !important;
         }
+
+        a.btn {
+            flex: 1 1 0px;
+            display: block;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            margin: 10px;
+        }
     </style>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -81,55 +90,59 @@
 </nav>
 <br/><br/>
 <div class="container">
-    <div class="purple darken-4 title-row row valign-wrapper section aoi hoverable">
-        <div class="col s2 right-align">
-            <img src="assets/aoi.jpeg" alt="Aoi" class="circle">
-        </div>
-        <div class="col s10 valign-wrapper">
-            Aoi is a brand-new bot, customizable enough to fit in any server.<br>
-
-            Look up information on a user, role, or server. Do math, render LaTeX. Make color palettes randomly or from
-            an
-            image, have server money to get roles, use global money to buy a fancy background for your profile card, and
-            more coming soon!<br>
-
-            Make use of the fine-grained permissions to control where/how Aoi can be used. Manage your server,
-            give everyone a role. Color roles according to a gradient (looking at you, aesthetic server owners).
-        </div>
-    </div>
-    <div class="deep-purple darken-4 title-row row valign-wrapper section aoi hoverable">
-        <div class="col s10 valign-wrapper">
-            Customizable configs for server owners. Make Aoi fit your server!
-        </div>
-        <div class="col s2">
-            <img src="assets/samples/configs.png" alt="Aoi">
-        </div>
-    </div>
-    <div class="purple darken-4 title-row row valign-wrapper section aoi hoverable">
-        <div class="col s2">
-            <a class="btn black"
-               href="https://discord.com/oauth2/authorize?client_id=738856230994313228&permissions=268659776&scope=bot">Invite</a>
-            <a class="btn blue-grey" href="https://discord.gg/pCgEj8t">Discord</a>
-            <a class="btn gray darken-3" href="https://github.com/aoi-bot/Aoi">GitHub</a>
-            <a class="btn green darken-3" href="https://app.gitkraken.com/glo/board/X0GTHiQxbQAR56zP">Project Board</a>
-        </div>
-        <div class="col s10">
-            Invite Aoi to your server, join the support Discord, or view the code and project boards.
-        </div>
-    </div>
-    <div class="deep-purple darken-4 title-row row valign-wrapper section aoi hoverable no-override-height">
-        <div class="col s6 valign-wrapper">
-            Customizable currency generation for server shops, and global currency for customization. Level up with
-            chat XP and get to the top of the leaderboard!
-        </div>
-        <div class="col s6">
-            <div class="row">
-                <div class="col s6">
-                    <img src="assets/samples/wallet.png" alt="Aoi" style="height: 120px">
-                    <img src="assets/samples/gxp.png" alt="Aoi" style="height: 172px;">
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/aoi.jpeg" alt="Aoi profile picture">
                 </div>
-                <div class="col s6">
-                    <img src="assets/samples/profile.png" alt="Aoi" style="height: 300px">
+                <div class="card-content purple darken-4">
+                    Aoi is a brand-new bot, customizable enough to fit in any server.<br>
+
+                    Look up information on a user, role, or server. Do math, render LaTeX. Make color palettes randomly
+                    or from
+                    an
+                    image, have server money to get roles, use global money to buy a fancy background for your profile
+                    card, and
+                    more coming soon!<br>
+
+                    Make use of the fine-grained permissions to control where/how Aoi can be used. Manage your server,
+                    give everyone a role. Color roles according to a gradient (looking at you, aesthetic server owners).
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content purple darken-4">
+                    <span class="card-title purple darken-4">Join team Aoi!</span>
+                    Invite Aoi to your server, join the support Discord, or view the code and project boards.
+                </div>
+                <div class="card-action purple darken-4">
+                    <a class="btn black"
+                       href="https://discord.com/oauth2/authorize?client_id=738856230994313228&permissions=268659776&scope=bot">Invite</a>
+                    <a class="btn blue-grey" href="https://discord.gg/pCgEj8t">Discord</a>
+                    <a class="btn gray darken-3" href="https://github.com/aoi-bot/Aoi">GitHub</a>
+                    <a class="btn green darken-3" href="https://app.gitkraken.com/glo/board/X0GTHiQxbQAR56zP">Project
+                        Board</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/samples/gxp.png" alt="Aoi">
+                </div>
+                <div class="card-content purple darken-4">
+                    Customizable currency generation for server shops, and global currency for customization. Level up
+                    with
+                    chat XP and get to the top of the leaderboard!
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/samples/configs.png" alt="Aoi">
+                    <span class="card-title black-text">Customizable</span>
+                </div>
+                <div class="card-content purple darken-4">
+                    Customizable configs for server owners. Make Aoi fit your server!
                 </div>
             </div>
         </div>
