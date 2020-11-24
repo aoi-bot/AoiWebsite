@@ -39,7 +39,6 @@
         </ul>
     </div>
 </nav>
-</br>
 <div class="container">
     <div class="row">
         <div class="col s12">
@@ -68,13 +67,13 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>namechannels</span>
                             <p>Names channels according to a pattern<br>Usage: <code>,namechannels </code><br>User
-                                Permissions Needed: Manage Guild, Manage Channels</p></div>
+                                Permissions Needed: Manage Server, Manage Channels</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>stripchannels</span>
                             <p>Remove text from the beginning or end of a channel. Separate multiple things to remove
-                                with a semicolon<br>Usage: <code>,stripchannels text</code><br>User Permissions
-                                Needed: Manage Guild, Manage Channels</p></div>
+                                with a semicolon<br>Usage: <code>,stripchannels text</code><br>User Permissions Needed:
+                                Manage Server, Manage Channels</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>nsfw</span>
@@ -205,8 +204,8 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>createrole</span>
                             <p>Creates one or more roles - multiword role names must be quoted.<br>Aliases:
-                                <code>cr</code><br>Usage: <code>,createrole names</code><br>User Permissions
-                                Needed: Manage Roles</p></div>
+                                <code>cr</code><br>Usage: <code>,createrole names</code><br>User Permissions Needed:
+                                Manage Roles</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>moverole</span>
@@ -221,26 +220,23 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>rolegradient</span>
                             <p>Colors roles as an RGB gradient between colors<br>Aliases: <code>rolegrad</code><br>Usage:
-                                <code>,rolegradient color1 color2 roles &lt;flags&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>flags</code> =</li>
-                            </ul>
-                            <br>User Permissions Needed: Manage Roles</p></div>
+                                <code>,rolegradient color1 color2 roles</code><br>User Permissions Needed: Manage Roles
+                            </p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>roleall</span>
                             <p>Adds a role to everyone - shows up in `mytasks` and may take a while.<br>Usage: <code>,roleall
-                                role flags</code><br>User Permissions Needed: Manage Roles, Manage Guild</p></div>
+                                role</code><br>User Permissions Needed: Manage Roles, Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>addautorole</span>
                             <p>Adds a role users get on join<br>Aliases: <code>aarole</code><br>Usage: <code>,addautorole
-                                role</code><br>User Permissions Needed: Manage Roles, Manage Guild</p></div>
+                                role</code><br>User Permissions Needed: Manage Roles, Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>delautorole</span>
                             <p>Deletes a role users get on join<br>Aliases: <code>darole</code><br>Usage: <code>,delautorole
-                                role</code><br>User Permissions Needed: Manage Roles, Manage Guild</p></div>
+                                role</code><br>User Permissions Needed: Manage Roles, Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>listautoroles</span>
@@ -278,8 +274,8 @@
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>colorroles</span>
-                            <p>Creates color roles<br>Usage: <code>,colorroles </code><br>User Permissions Needed: Manage
-                                Roles</p></div>
+                            <p>Creates color roles<br>Usage: <code>,colorroles </code><br>User Permissions Needed:
+                                Manage Roles</p></div>
                     </div>
                 </div>
                 <div id=WelcomeGoodbye class='fill'>
@@ -299,32 +295,32 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>leavemsg</span>
                             <p>Set the goodbye message for a server<br>Usage: <code>,leavemsg message</code><br>User
-                                Permissions Needed: Manage Guild</p></div>
+                                Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>leavemsgchnl</span>
                             <p>Set the channel the goodbye message displays in<br>Usage: <code>,leavemsgchnl
-                                channel</code><br>User Permissions Needed: Manage Guild</p></div>
+                                channel</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>leavemsgdel</span>
                             <p>Set the deletion delay for the leave message, 0 to disable<br>Usage: <code>,leavemsgdel
-                                secs</code><br>User Permissions Needed: Manage Guild</p></div>
+                                secs</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>joinmsg</span>
                             <p>Set the welcome message for a server<br>Usage: <code>,joinmsg message</code><br>User
-                                Permissions Needed: Manage Guild</p></div>
+                                Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>joinmsgchnl</span>
                             <p>Set the channel the welcome message displays in<br>Usage: <code>,joinmsgchnl
-                                channel</code><br>User Permissions Needed: Manage Guild</p></div>
+                                channel</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>joinmsgdel</span>
                             <p>Set the deletion delay for the welcome message, 0 to disable<br>Usage: <code>,joinmsgdel
-                                secs</code><br>User Permissions Needed: Manage Guild</p></div>
+                                secs</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                 </div>
             </div>
@@ -336,6 +332,7 @@
                     <li class="tab white-text fill"><a href="#TaskManagement" class="white-text">TaskManagement</a></li>
                     <li class="tab white-text fill"><a href="#Users" class="white-text">Users</a></li>
                     <li class="tab white-text fill"><a href="#GuildSettings" class="white-text">GuildSettings</a></li>
+                    <li class="tab white-text fill"><a href="#Triggers" class="white-text">Triggers</a></li>
                 </ul>
                 <div id=Aoi class='fill'>
                     <div class='card purple darken-4'>
@@ -385,18 +382,20 @@
                     <hr/>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>prefix</span>
-                            <p>Set Aoi's prefix<br>Usage: <code>,prefix prefix</code><br>User Permissions Needed: Manage
-                                Guild</p></div>
+                            <p>Set Aoi's prefix<br>Usage: <code>,prefix &lt;prefix&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>prefix</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>config</span>
                             <p>Set server config<br>Usage: <code>,config setting value</code><br>User Permissions
-                                Needed: Manage Guild</p></div>
+                                Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>configs</span>
-                            <p>Lists current configs for the server.<br>Usage: <code>,configs </code><br>User
-                                Permissions Needed: Manage Guild</p></div>
+                            <p>Lists current configs for the server.<br>Usage: <code>,configs </code></p></div>
                     </div>
                 </div>
                 <div id=Guilds class='fill'>
@@ -408,19 +407,22 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>renameserver</span>
                             <p>Renames the server<br>Aliases: <code>guildnm</code>&emsp;<code>servernm</code><br>Usage:
-                                <code>,renameserver name</code><br>User Permissions Needed: Manage Guild</p></div>
+                                <code>,renameserver name</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>serveravatar</span>
-                            <p>Sets the server's icon<br>Aliases:
-                                <code>guildav</code>&emsp;<code>serverav</code>&emsp;<code>servericon</code><br>Usage:
-                                <code>,serveravatar url</code><br>User Permissions Needed: Manage Guild</p></div>
+                            <p>Sets the server's icon, or show the current.<br>Aliases: <code>guildav</code>&emsp;<code>serverav</code>&emsp;<code>servericon</code><br>Usage:
+                                <code>,serveravatar &lt;url&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>url</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>serverregion</span>
                             <p>Sets the server's voice region<br>Aliases:
                                 <code>guildreg</code>&emsp;<code>serverreg</code><br>Usage: <code>,serverregion
-                                    region</code><br>User Permissions Needed: Manage Guild</p></div>
+                                    region</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>regions</span>
@@ -468,8 +470,8 @@
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>menroles</span>
-                            <p>Shows mentionable roles<br>Usage: <code>,menroles </code><br>User Permissions
-                                Needed: Manage Guild</p></div>
+                            <p>Shows mentionable roles<br>Usage: <code>,menroles </code><br>User Permissions Needed:
+                                Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>voiceinfo</span>
@@ -525,6 +527,38 @@
                             </p></div>
                     </div>
                 </div>
+                <div id=Triggers class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Triggers</span>
+                            <p>Add custom triggers to Aoi</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>onroleadd</span>
+                            <p>Set a trigger for a role addition<br>Aliases: <code>onra</code><br>Usage: <code>,onroleadd
+                                role channel message</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>onroleremove</span>
+                            <p>Set a trigger for a role removal<br>Aliases: <code>onrr</code><br>Usage: <code>,onroleremove
+                                role channel message</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>removetrigger</span>
+                            <p>Remove a trigger<br>Aliases: <code>remtr</code><br>Usage: <code>,removetrigger
+                                trigger_type arg</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>roletriggers</span>
+                            <p>Lists the role triggers<br>Aliases: <code>roletr</code>&emsp;<code>roletrigger</code><br>Usage:
+                                <code>,roletriggers &lt;for_role&gt; &lt;add_or_remove&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>for_role</code> = None</li>
+                                <li style='margin-top:-1px'><code>add_or_remove</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                </div>
                 <div id=Users class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Users</span>
@@ -549,6 +583,8 @@
                     <li class="tab white-text fill"><a href="#Minigames" class="white-text">Minigames</a></li>
                     <li class="tab white-text fill"><a href="#Geolocation" class="white-text">Geolocation</a></li>
                     <li class="tab white-text fill"><a href="#Fun" class="white-text">Fun</a></li>
+                    <li class="tab white-text fill"><a href="#Weather" class="white-text">Weather</a></li>
+                    <li class="tab white-text fill"><a href="#Utility" class="white-text">Utility</a></li>
                 </ul>
                 <div id=Colors class='fill'>
                     <div class='card purple darken-4'>
@@ -629,12 +665,11 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>minesweeper</span>
                             <p>Makes a discord minesweeper game<br>Usage: <code>,minesweeper &lt;height&gt; &lt;width&gt;
-                                &lt;bombs&gt; &lt;flags&gt;</code><br>Defaults:
+                                &lt;bombs&gt;</code><br>Defaults:
                             <ul class='browser-default' style='margin-top:-2px'>
                                 <li style='margin-top:-1px'><code>height</code> = 10</li>
                                 <li style='margin-top:-1px'><code>width</code> = 10</li>
                                 <li style='margin-top:-1px'><code>bombs</code> = 10</li>
-                                <li style='margin-top:-1px'><code>flags</code> = None</li>
                             </ul>
                             </p></div>
                     </div>
@@ -662,6 +697,10 @@
                                 <li style='margin-top:-1px'><code>member</code> = None</li>
                             </ul>
                             </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>lyrics</span>
+                            <p>Look up the lyrics for a song<br>Usage: <code>,lyrics query</code></p></div>
                     </div>
                 </div>
                 <div id=Geolocation class='fill'>
@@ -805,6 +844,60 @@
                             <p>Search for a tag on Pixiv<br>Usage: <code>,pixiv tag</code></p></div>
                     </div>
                 </div>
+                <div id=Utility class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Utility</span>
+                            <p>Various utility commands</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>currency</span>
+                            <p>Convert currency<br>Usage: <code>,currency amount from_unit to_unit</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>exchangerates</span>
+                            <p>Shows the current exchange rates, with an optional base<br>Aliases: <code>exchange</code><br>Usage:
+                                <code>,exchangerates &lt;base&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>base</code> = usd</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                </div>
+                <div id=Weather class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Weather</span>
+                            <p>Look up weather data for a location</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>stormrain</span>
+                            <p>A map of the amount of rain from the current storm<br>Usage: <code>,stormrain
+                                location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>hourrain</span>
+                            <p>A map of the amount of rain from the last hour<br>Usage: <code>,hourrain location</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>radarloop</span>
+                            <p>Look up a looping radar<br>Usage: <code>,radarloop location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>satellite</span>
+                            <p>Look up a current satellite image<br>Aliases: <code>radar</code><br>Usage: <code>,satellite
+                                location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>wxraw</span>
+                            <p>View the raw data for a lat/long<br>Usage: <code>,wxraw location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>wxhourly</span>
+                            <p>Look up an hourly forecast<br>Usage: <code>,wxhourly location</code></p></div>
+                    </div>
+                </div>
             </div>
             <div id="Profile_Currency" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
@@ -932,7 +1025,7 @@
                         <div class='card-content white-text'><span class='card-title'>shoproleadd</span>
                             <p>Add a role to the shop<br>Aliases:
                                 <code>shopradd</code>&emsp;<code>shopra</code>&emsp;<code>shopaddrole</code>&emsp;<code>shopar</code><br>Usage:
-                                <code>,shoproleadd role cost</code><br>User Permissions Needed: Manage Guild</p></div>
+                                <code>,shoproleadd role cost</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>shop</span>
@@ -942,7 +1035,7 @@
                         <div class='card-content white-text'><span class='card-title'>shoproleremove</span>
                             <p>Remove a role from the server shop<br>Aliases:
                                 <code>shoprrem</code>&emsp;<code>shoprr</code>&emsp;<code>shopremoverole</code>&emsp;<code>shopremr</code><br>Usage:
-                                <code>,shoproleremove role</code><br>User Permissions Needed: Manage Guild</p></div>
+                                <code>,shoproleremove role</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>buyrole</span>
@@ -1040,11 +1133,7 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>commands</span>
                             <p>Lists commands within a module<br>Aliases: <code>cmds</code><br>Usage: <code>,commands
-                                module &lt;flags&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>flags</code> = None</li>
-                            </ul>
-                            </p></div>
+                                module</code></p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>help</span>
@@ -1062,6 +1151,7 @@
 </div>
 <div>
 </div>
+
 
 
 <footer class="black-text row ">
