@@ -43,11 +43,6 @@
         </ul>
     </div>
 </nav>
-
-
-</br>
-
-
 </br>
 <div class="container">
     <div class="row">
@@ -336,17 +331,18 @@
             </div>
             <div id="Administration" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
-                    <li class="tab white-text fill"><a href="#Aoi" class="white-text">Aoi</a></li>
+                    <li class="tab white-text fill"><a href="#Bot" class="white-text">Bot</a></li>
                     <li class="tab white-text fill"><a href="#Information" class="white-text">Information</a></li>
                     <li class="tab white-text fill"><a href="#Guilds" class="white-text">Guilds</a></li>
                     <li class="tab white-text fill"><a href="#TaskManagement" class="white-text">TaskManagement</a></li>
                     <li class="tab white-text fill"><a href="#Users" class="white-text">Users</a></li>
                     <li class="tab white-text fill"><a href="#GuildSettings" class="white-text">GuildSettings</a></li>
                     <li class="tab white-text fill"><a href="#Triggers" class="white-text">Triggers</a></li>
+                    <li class="tab white-text fill"><a href="#Messages" class="white-text">Messages</a></li>
                 </ul>
-                <div id=Aoi class='fill'>
+                <div id=Bot class='fill'>
                     <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Aoi</span>
+                        <div class='card-content white-text'><span class='card-title'>Bot</span>
                             <p>Commands having to do with the bot herself</p></div>
                     </div>
                     <hr/>
@@ -364,7 +360,7 @@
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>die</span>
-                            <p>Log AOI out<br>Usage: <code>,die </code></p></div>
+                            <p>Log Aoi out<br>Usage: <code>,die </code></p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>flush</span>
@@ -372,7 +368,7 @@
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>guildlist</span>
-                            <p>List servers this server is part of<br>Usage: <code>,guildlist </code></p></div>
+                            <p>List servers the bot is part of<br>Usage: <code>,guildlist </code></p></div>
                     </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>guildinfo</span>
@@ -387,7 +383,7 @@
                 <div id=GuildSettings class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>GuildSettings</span>
-                            <p>Change and view Aoi's configuration in your server</p></div>
+                            <p>Change and view 's configuration in your server</p></div>
                     </div>
                     <hr/>
                     <div class='card purple darken-2'>
@@ -513,6 +509,52 @@
                             </p></div>
                     </div>
                 </div>
+                <div id=Messages class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Messages</span>
+                            <p>Commands to deal with messages</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>noreactions</span>
+                            <p>Lists the users who have not reacted to a message<br>Usage: <code>,noreactions msg</code><br>User
+                                Permissions Needed: Manage Messages</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>reactions</span>
+                            <p>Lists the users who have reacted to a message<br>Usage: <code>,reactions msg</code><br>User
+                                Permissions Needed: Manage Messages</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>say</span>
+                            <p>Send a message with Aoi. Use [this site](https://embed.aoibot.xyz/) to make embeds.<br>Usage:
+                                <code>,say msg</code><br>User Permissions Needed: Manage Messages</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>edit</span>
+                            <p>Edit a message from Aoi. Use [this site](https://embed.aoibot.xyz/) to make embeds.<br>Usage:
+                                <code>,edit message msg</code><br>User Permissions Needed: Manage Messages</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>delete</span>
+                            <p>Delete a message<br>Usage: <code>,delete message &lt;delay&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>delay</code> = 0</li>
+                            </ul>
+                            <br>User Permissions Needed: Manage Messages</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>savechat</span>
+                            <p>Saves chat in a txt file. Limit can be a message to stop at or a number of messages<br>Usage:
+                                <code>,savechat channel limit</code><br>User Permissions Needed: Manage Messages</p>
+                        </div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>clear</span>
+                            <p>Clear message from a channel<br>Usage: <code>,clear n</code><br>User Permissions Needed:
+                                Manage Messages</p></div>
+                    </div>
+                </div>
                 <div id=TaskManagement class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>TaskManagement</span>
@@ -540,7 +582,7 @@
                 <div id=Triggers class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Triggers</span>
-                            <p>Add custom triggers to Aoi</p></div>
+                            <p>Add custom triggers to </p></div>
                     </div>
                     <hr/>
                     <div class='card purple darken-2'>
@@ -587,7 +629,6 @@
                     <li class="tab white-text fill"><a href="#Colors" class="white-text">Colors</a></li>
                     <li class="tab white-text fill"><a href="#NSFW" class="white-text">NSFW</a></li>
                     <li class="tab white-text fill"><a href="#Math" class="white-text">Math</a></li>
-                    <li class="tab white-text fill"><a href="#Messages" class="white-text">Messages</a></li>
                     <li class="tab white-text fill"><a href="#Searches" class="white-text">Searches</a></li>
                     <li class="tab white-text fill"><a href="#Nasa" class="white-text">Nasa</a></li>
                     <li class="tab white-text fill"><a href="#Minigames" class="white-text">Minigames</a></li>
@@ -760,33 +801,10 @@
                             <p>Render LaTeX<br>Usage: <code>,latex formula</code></p></div>
                     </div>
                 </div>
-                <div id=Messages class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Messages</span>
-                            <p>Commands to deal with messages</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>noreactions</span>
-                            <p>Lists the users who have not reacted to a message<br>Usage: <code>,noreactions msg</code><br>User
-                                Permissions Needed: Manage Messages</p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>reactions</span>
-                            <p>Lists the users who have reacted to a message<br>Usage: <code>,reactions msg</code><br>User
-                                Permissions Needed: Manage Messages</p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>say</span>
-                            <p>Send a message with Aoi. Use [this site](https://embed.aoibot.xyz/) to make the
-                                embed.<br>Usage: <code>,say msg</code><br>User Permissions Needed: Manage Messages</p>
-                        </div>
-                    </div>
-                </div>
                 <div id=Minigames class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Minigames</span>
-                            <p>Minigames to play with Aoi or others</p></div>
+                            <p>Minigames to play with or others</p></div>
                     </div>
                     <hr/>
                     <div class='card purple darken-2'>
@@ -848,10 +866,6 @@
                         <div class='card-content white-text'><span class='card-title'>imgur</span>
                             <p>Search a tag on Imgur<br>Aliases: <code>img</code><br>Usage: <code>,imgur tag</code></p>
                         </div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>pixiv</span>
-                            <p>Search for a tag on Pixiv<br>Usage: <code>,pixiv tag</code></p></div>
                     </div>
                 </div>
                 <div id=Utility class='fill'>
@@ -1117,7 +1131,7 @@
                 <div id=Guides class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Guides</span>
-                            <p>Guides on how to use Aoi</p></div>
+                            <p>Guides on how to use </p></div>
                     </div>
                     <hr/>
                     <div class='card purple darken-2'>
@@ -1161,6 +1175,7 @@
 </div>
 <div>
 </div>
+
 
 
 <footer class="black-text row ">
