@@ -1,49 +1,3 @@
-<html>
-<head>
-    <title>Aoi Commands</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        function theme() {
-            if (!localStorage.getItem("theme")) {
-                localStorage.setItem("theme", "light")
-            }
-            document.getElementsByTagName("body")[0].style.backgroundColor = localStorage.getItem("theme") === "light" ?
-                "90CAF9" : "130C2B"
-            document.getElementById("theme_selector").checked = localStorage.getItem("theme") !== "light";
-        }
-
-        function set_theme() {
-            localStorage.setItem("theme", document.getElementById("theme_selector").checked ? "dark" : "light");
-            document.getElementsByTagName("body")[0].style.backgroundColor = localStorage.getItem("theme") === "light" ?
-                "90CAF9" : "130C2B"
-        }
-    </script>
-    <style>
-        div.fill {
-            width: 100% !important;
-        }
-
-        span.card-title {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body onload="M.AutoInit(); theme()" class="white-text">
-<nav class="deep-purple darken-4">
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo left">Aoi</a>
-        <ul id="nav-mobile" class="hide-on-med-and-low right">
-            <li>
-                <a href="https://discord.com/oauth2/authorize?client_id=738856230994313228&permissions=268659776&scope=bot">Invite</a>
-            </li>
-            <li><a href="https://discord.gg/pCgEj8t">Discord</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="commands.html">Commands</a></li>
-        </ul>
-    </div>
-</nav>
-</br>
 <div class="container">
     <div class="row">
         <div class="col s12">
@@ -52,7 +6,8 @@
                 <li class="tab white-text fill"><a href="#Administration" class="white-text">Administration</a></li>
                 <li class="tab white-text fill"><a href="#Misc" class="white-text">Misc</a></li>
                 <li class="tab white-text fill"><a href="#Profile_Currency" class="white-text">Profile/Currency</a></li>
-                <li class="tab white-text fill"><a href="#Utility_Config" class="white-text">Utility/Config</a></li>
+                <li class="tab white-text fill"><a href="#Bot_Utility_Config" class="white-text">Bot Utility/Config</a>
+                </li>
             </ul>
         </div>
         <div class="col s12">
@@ -69,17 +24,6 @@
                             <p>Commands dealing with channels</p></div>
                     </div>
                     <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>namechannels</span>
-                            <p>Names channels according to a pattern<br>Usage: <code>,namechannels </code><br>User
-                                Permissions Needed: Manage Server, Manage Channels</p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>stripchannels</span>
-                            <p>Remove text from the beginning or end of a channel. Separate multiple things to remove
-                                with a semicolon<br>Usage: <code>,stripchannels text</code><br>User Permissions Needed:
-                                Manage Server, Manage Channels</p></div>
-                    </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>nsfw</span>
                             <p>Toggles if a channel is NSFW<br>Usage: <code>,nsfw &lt;channel&gt;</code><br>Defaults:
@@ -164,19 +108,88 @@
                                 channel enabled</code><br>User Permissions Needed: Administrator</p></div>
                     </div>
                     <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>allcatmdls</span>
+                            <p>Disable or enable all modules in a category<br>Aliases: <code>axm</code><br>Usage: <code>,allcatmdls
+                                category enabled</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>allrolemdls</span>
+                            <p>Disable or enable all commands for a role<br>Aliases: <code>arm</code><br>Usage: <code>,allrolemdls
+                                role enabled</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>allusrmdls</span>
+                            <p>Disable or enable all commands for a user<br>Aliases: <code>aum</code><br>Usage: <code>,allusrmdls
+                                member enabled</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>chnlmdl</span>
                             <p>Disable or enable a module in a channel<br>Aliases: <code>cm</code><br>Usage: <code>,chnlmdl
                                 channel enabled module</code><br>User Permissions Needed: Administrator</p></div>
                     </div>
                     <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>svrcmd</span>
-                            <p>Disable or enable a command server-wide<br>Aliases: <code>sc</code><br>Usage: <code>,svrcmd
-                                command enabled</code><br>User Permissions Needed: Administrator</p></div>
-                    </div>
-                    <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>svrmdl</span>
                             <p>Disable or enable a module server-wide<br>Aliases: <code>sm</code><br>Usage: <code>,svrmdl
-                                module enabled</code><br>User Permissions Needed: Administrator</p></div>
+                                enabled module</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>rolemdl</span>
+                            <p>Disable or enable a module for a role<br>Aliases: <code>rm</code><br>Usage: <code>,rolemdl
+                                role enabled module</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>catmdl</span>
+                            <p>Disable or enable a module in a category<br>Aliases: <code>xm</code><br>Usage: <code>,catmdl
+                                category enabled module</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>usrmdl</span>
+                            <p>Disable or enable a module for a user<br>Aliases: <code>um</code><br>Usage: <code>,usrmdl
+                                member enabled module</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>svrcmd</span>
+                            <p>Disable or enable a command server-wide<br>Aliases: <code>sc</code><br>Usage: <code>,svrcmd
+                                enabled command</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>rolecmd</span>
+                            <p>Disable or enable a command for a role<br>Aliases: <code>rc</code><br>Usage: <code>,rolecmd
+                                role enabled command</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>chancmd</span>
+                            <p>Disable or enable a command in a channel<br>Aliases: <code>cc</code><br>Usage: <code>,chancmd
+                                channel enabled command</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>catcmd</span>
+                            <p>Disable or enable a command for a category<br>Aliases: <code>xc</code><br>Usage: <code>,catcmd
+                                category enabled command</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>usrcmd</span>
+                            <p>Disable or enable a command for a user<br>Aliases: <code>uc</code><br>Usage: <code>,usrcmd
+                                member enabled command</code><br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>blacklist</span>
+                            <p>Blacklists a user from the bot<br>Aliases: <code>bl</code><br>Usage: <code>,blacklist
+                                user</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>unblacklist</span>
+                            <p>Un-blacklists a user from the bot<br>Aliases: <code>ubl</code><br>Usage: <code>,unblacklist
+                                user</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>blacklistcheck</span>
+                            <p>Checks if an ID is blacklisted, or else prints out blacklisted IDs<br>Aliases:
+                                <code>cbl</code><br>Usage: <code>,blacklistcheck &lt;user&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>user</code> = None</li>
+                            </ul>
+                            </p></div>
                     </div>
                 </div>
                 <div id=Roles class='fill'>
@@ -331,79 +344,15 @@
             </div>
             <div id="Administration" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
-                    <li class="tab white-text fill"><a href="#Bot" class="white-text">Bot</a></li>
                     <li class="tab white-text fill"><a href="#Information" class="white-text">Information</a></li>
                     <li class="tab white-text fill"><a href="#Guilds" class="white-text">Guilds</a></li>
                     <li class="tab white-text fill"><a href="#TaskManagement" class="white-text">TaskManagement</a></li>
                     <li class="tab white-text fill"><a href="#Users" class="white-text">Users</a></li>
-                    <li class="tab white-text fill"><a href="#GuildSettings" class="white-text">GuildSettings</a></li>
                     <li class="tab white-text fill"><a href="#Triggers" class="white-text">Triggers</a></li>
                     <li class="tab white-text fill"><a href="#Messages" class="white-text">Messages</a></li>
+                    <li class="tab white-text fill"><a href="#Moderation" class="white-text">Moderation</a></li>
+                    <li class="tab white-text fill"><a href="#ReactionRoles" class="white-text">ReactionRoles</a></li>
                 </ul>
-                <div id=Bot class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Bot</span>
-                            <p>Commands having to do with the bot herself</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>stats</span>
-                            <p>Shows bot stats<br>Usage: <code>,stats </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>invite</span>
-                            <p>Gives a link to invite Aoi to your server<br>Usage: <code>,invite </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>ping</span>
-                            <p>Shows Aoi's latency to discord<br>Usage: <code>,ping </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>die</span>
-                            <p>Log Aoi out<br>Usage: <code>,die </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>flush</span>
-                            <p>Flush XP/Currency to database manually<br>Usage: <code>,flush </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>guildlist</span>
-                            <p>List servers the bot is part of<br>Usage: <code>,guildlist </code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>guildinfo</span>
-                            <p>Basic information about a server the bot is on<br>Usage: <code>,guildinfo guild</code>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>commandstats</span>
-                            <p>Show most used commands<br>Usage: <code>,commandstats </code></p></div>
-                    </div>
-                </div>
-                <div id=GuildSettings class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>GuildSettings</span>
-                            <p>Change and view 's configuration in your server</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>prefix</span>
-                            <p>Set Aoi's prefix<br>Usage: <code>,prefix &lt;prefix&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>prefix</code> = None</li>
-                            </ul>
-                            <br>User Permissions Needed: Manage Server</p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>config</span>
-                            <p>Set server config<br>Usage: <code>,config setting value</code><br>User Permissions
-                                Needed: Manage Server</p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>configs</span>
-                            <p>Lists current configs for the server.<br>Usage: <code>,configs </code></p></div>
-                    </div>
-                </div>
                 <div id=Guilds class='fill'>
                     <div class='card purple darken-4'>
                         <div class='card-content white-text'><span class='card-title'>Guilds</span>
@@ -508,6 +457,29 @@
                             </ul>
                             </p></div>
                     </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>rolepermissions</span>
+                            <p>Shows a role's permissions, optionally in a channel<br>Aliases: <code>rperms</code>&emsp;<code>roleperms</code><br>Usage:
+                                <code>,rolepermissions role &lt;channel&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>channel</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>hasrole</span>
+                            <p>Shows people in a role<br>Usage: <code>,hasrole role</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>hasroles</span>
+                            <p>Shows people with all of the listed roles<br>Usage: <code>,hasroles roles</code></p>
+                        </div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>rolecompare</span>
+                            <p>Shows the number of members with each role<br>Aliases: <code>rcompare</code><br>Usage:
+                                <code>,rolecompare roles</code></p></div>
+                    </div>
                 </div>
                 <div id=Messages class='fill'>
                     <div class='card purple darken-4'>
@@ -553,6 +525,104 @@
                         <div class='card-content white-text'><span class='card-title'>clear</span>
                             <p>Clear message from a channel<br>Usage: <code>,clear n</code><br>User Permissions Needed:
                                 Manage Messages</p></div>
+                    </div>
+                </div>
+                <div id=Moderation class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Moderation</span>
+                            <p>Commands for moderation</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>kick</span>
+                            <p>Kicks a member from the server<br>Usage: <code>,kick member &lt;reason&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>reason</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Kick Members</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>ban</span>
+                            <p>Bans a member from the server<br>Usage: <code>,ban member &lt;reason&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>reason</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Ban Members</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>softban</span>
+                            <p>Softbans a member from the server<br>Usage: <code>,softban member
+                                &lt;reason&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>reason</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Ban Members</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>unban</span>
+                            <p>Unbans a member from the server<br>Usage: <code>,unban user &lt;reason&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>reason</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Ban Members</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>warn</span>
+                            <p>Warns a member<br>Usage: <code>,warn member &lt;reason&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>reason</code> = No reason provided</li>
+                            </ul>
+                            <br>User Permissions Needed: Kick Members</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>punishmentclear</span>
+                            <p>Clears a warning for a user<br>Aliases: <code>pclear</code><br>Usage: <code>,punishmentclear
+                                member &lt;num&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>num</code> = 1</li>
+                            </ul>
+                            <br>User Permissions Needed: Ban Members</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>logs</span>
+                            <p>Views the punishment logs for a user<br>Usage: <code>,logs &lt;member&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>member</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>warnp</span>
+                            <p>Adds or removes a warn punishment<br>Usage: <code>,warnp warns &lt;action&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>action</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Administrator</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>warnpl</span>
+                            <p>View the server's warning punishment list<br>Usage: <code>,warnpl </code></p></div>
+                    </div>
+                </div>
+                <div id=ReactionRoles class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>ReactionRoles</span>
+                            <p>Commands to manage reaction roles</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>addrero</span>
+                            <p>Add a reaction role message<br>Usage: <code>,addrero message args</code><br>User
+                                Permissions Needed: Manage Roles</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>clearrero</span>
+                            <p>Clear reaction roles from a message<br>Usage: <code>,clearrero message
+                                &lt;emoji&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>emoji</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Manage Roles</p></div>
                     </div>
                 </div>
                 <div id=TaskManagement class='fill'>
@@ -627,15 +697,12 @@
             <div id="Misc" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
                     <li class="tab white-text fill"><a href="#Colors" class="white-text">Colors</a></li>
-                    <li class="tab white-text fill"><a href="#NSFW" class="white-text">NSFW</a></li>
-                    <li class="tab white-text fill"><a href="#Math" class="white-text">Math</a></li>
                     <li class="tab white-text fill"><a href="#Searches" class="white-text">Searches</a></li>
-                    <li class="tab white-text fill"><a href="#Nasa" class="white-text">Nasa</a></li>
-                    <li class="tab white-text fill"><a href="#Minigames" class="white-text">Minigames</a></li>
                     <li class="tab white-text fill"><a href="#Geolocation" class="white-text">Geolocation</a></li>
                     <li class="tab white-text fill"><a href="#Fun" class="white-text">Fun</a></li>
-                    <li class="tab white-text fill"><a href="#Weather" class="white-text">Weather</a></li>
                     <li class="tab white-text fill"><a href="#Utility" class="white-text">Utility</a></li>
+                    <li class="tab white-text fill"><a href="#TBHK" class="white-text">TBHK</a></li>
+                    <li class="tab white-text fill"><a href="#Quotes" class="white-text">Quotes</a></li>
                 </ul>
                 <div id=Colors class='fill'>
                     <div class='card purple darken-4'>
@@ -664,7 +731,7 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>gradient</span>
                             <p>Makes an RGB gradient between colors. Number of colors is optional, defaults to 4 and
-                                must be between 3 and 10.<br>Aliases: <code>grad</code><br>Usage: <code>,gradient color1
+                                must be between 3 and 60.<br>Aliases: <code>grad</code><br>Usage: <code>,gradient color1
                                     color2 &lt;num&gt;</code><br>Defaults:
                             <ul class='browser-default' style='margin-top:-2px'>
                                 <li style='margin-top:-1px'><code>num</code> = 4</li>
@@ -674,7 +741,7 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>hgradient</span>
                             <p>Makes an HLS gradient between RGB colors. Number of colors is optional, defaults to 4 and
-                                must be between 3 and 10.<br>Aliases: <code>hgrad</code><br>Usage: <code>,hgradient
+                                must be between 3 and 60.<br>Aliases: <code>hgrad</code><br>Usage: <code>,hgradient
                                     color1 color2 &lt;num&gt;</code><br>Defaults:
                             <ul class='browser-default' style='margin-top:-2px'>
                                 <li style='margin-top:-1px'><code>num</code> = 4</li>
@@ -714,6 +781,10 @@
                     </div>
                     <hr/>
                     <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>customcmds</span>
+                            <p>Lists the active custom commands<br>Usage: <code>,customcmds </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>minesweeper</span>
                             <p>Makes a discord minesweeper game<br>Usage: <code>,minesweeper &lt;height&gt; &lt;width&gt;
                                 &lt;bombs&gt;</code><br>Defaults:
@@ -750,8 +821,21 @@
                             </p></div>
                     </div>
                     <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>lyrics</span>
-                            <p>Look up the lyrics for a song<br>Usage: <code>,lyrics query</code></p></div>
+                        <div class='card-content white-text'><span class='card-title'>tictactoe</span>
+                            <p>Play tic tac toe<br>Aliases: <code>ttt</code><br>Usage: <code>,tictactoe </code></p>
+                        </div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>rps</span>
+                            <p>Play rock paper scissors, with an optional amount of turns<br>Usage: <code>,rps &lt;turns&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>turns</code> = 3</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>hug</span>
+                            <p>hug custom command<br>Usage: <code>,hug _ user</code></p></div>
                     </div>
                 </div>
                 <div id=Geolocation class='fill'>
@@ -766,12 +850,127 @@
                         </div>
                     </div>
                 </div>
-                <div id=Math class='fill'>
+                <div id=Quotes class='fill'>
                     <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Math</span>
-                            <p>Commands to do basic math</p></div>
+                        <div class='card-content white-text'><span class='card-title'>Quotes</span>
+                            <p>Store and retrieve quotes</p></div>
                     </div>
                     <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>addquote</span>
+                            <p>Adds a quote<br>Aliases: <code>aq</code>&emsp;<code>adq</code><br>Usage: <code>,addquote
+                                trigger response</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>quote</span>
+                            <p>Recalls a quote<br>Aliases: <code>q</code><br>Usage: <code>,quote trigger</code></p>
+                        </div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>listuserquotes</span>
+                            <p>Lists all quotes<br>Aliases: <code>luq</code><br>Usage: <code>,listuserquotes &lt;member&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>member</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>deletequote</span>
+                            <p>Delete a quote<br>Aliases: <code>delq</code><br>Usage: <code>,deletequote quote</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>searchquotes</span>
+                            <p>Search quotes<br>Aliases: <code>searchq</code><br>Usage: <code>,searchquotes
+                                search_term</code></p></div>
+                    </div>
+                </div>
+                <div id=Searches class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Searches</span>
+                            <p>Various search commands</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>imgur</span>
+                            <p>Search a tag on Imgur<br>Aliases: <code>img</code><br>Usage: <code>,imgur tag</code></p>
+                        </div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>lyrics</span>
+                            <p>Look up the lyrics for a song<br>Usage: <code>,lyrics query</code></p></div>
+                    </div>
+                </div>
+                <div id=TBHK class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>TBHK</span>
+                            <p>TBHK things, cuz Aoi</p></div>
+                    </div>
+                    <hr/>
+                </div>
+                <div id=Utility class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>Utility</span>
+                            <p>Various utility commands</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>landsat</span>
+                            <p>Get a LANDSAT-8 image of a lat/long<br>Usage: <code>,landsat coords
+                                &lt;date&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>date</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>apod</span>
+                            <p>Gets the astronomy picture of the day<br>Usage: <code>,apod &lt;date&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>date</code> = None</li>
+                            </ul>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>stormrain</span>
+                            <p>A map of the amount of rain from the current storm<br>Usage: <code>,stormrain
+                                location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>hourrain</span>
+                            <p>A map of the amount of rain from the last hour<br>Usage: <code>,hourrain location</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>radarloop</span>
+                            <p>Look up a looping radar<br>Usage: <code>,radarloop location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>satellite</span>
+                            <p>Look up a current satellite image<br>Aliases: <code>radar</code><br>Usage: <code>,satellite
+                                location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>wxraw</span>
+                            <p>View the raw data for a lat/long<br>Usage: <code>,wxraw location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>wxhourly</span>
+                            <p>Look up an hourly forecast<br>Usage: <code>,wxhourly location</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>currency</span>
+                            <p>Convert currency<br>Usage: <code>,currency amount from_unit to_unit</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>exchangerates</span>
+                            <p>Shows the current exchange rates, with an optional base<br>Aliases: <code>exchange</code><br>Usage:
+                                <code>,exchangerates &lt;base&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>base</code> = usd</li>
+                            </ul>
+                            </p></div>
+                    </div>
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>primefactor</span>
                             <p>Find the prime factorization of a number<br>Aliases:
@@ -799,127 +998,6 @@
                     <div class='card purple darken-2'>
                         <div class='card-content white-text'><span class='card-title'>latex</span>
                             <p>Render LaTeX<br>Usage: <code>,latex formula</code></p></div>
-                    </div>
-                </div>
-                <div id=Minigames class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Minigames</span>
-                            <p>Minigames to play with or others</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>tictactoe</span>
-                            <p>Play tic tac toe<br>Aliases: <code>ttt</code><br>Usage: <code>,tictactoe </code></p>
-                        </div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>rps</span>
-                            <p>Play rock paper scissors, with an optional amount of turns<br>Usage: <code>,rps &lt;turns&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>turns</code> = 3</li>
-                            </ul>
-                            </p></div>
-                    </div>
-                </div>
-                <div id=NSFW class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>NSFW</span>
-                            <p>:smirk:</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>gelbooru</span>
-                            <p>Find a random gelbooru post by tag<br>Usage: <code>,gelbooru tags</code></p></div>
-                    </div>
-                </div>
-                <div id=Nasa class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Nasa</span>
-                            <p>A collection of commands to look up data from NASA</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>landsat</span>
-                            <p>Get a LANDSAT-8 image of a lat/long<br>Usage: <code>,landsat coords
-                                &lt;date&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>date</code> = None</li>
-                            </ul>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>apod</span>
-                            <p>Gets the astronomy picture of the day<br>Usage: <code>,apod &lt;date&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>date</code> = None</li>
-                            </ul>
-                            </p></div>
-                    </div>
-                </div>
-                <div id=Searches class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Searches</span>
-                            <p>Various search commands</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>imgur</span>
-                            <p>Search a tag on Imgur<br>Aliases: <code>img</code><br>Usage: <code>,imgur tag</code></p>
-                        </div>
-                    </div>
-                </div>
-                <div id=Utility class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Utility</span>
-                            <p>Various utility commands</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>currency</span>
-                            <p>Convert currency<br>Usage: <code>,currency amount from_unit to_unit</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>exchangerates</span>
-                            <p>Shows the current exchange rates, with an optional base<br>Aliases: <code>exchange</code><br>Usage:
-                                <code>,exchangerates &lt;base&gt;</code><br>Defaults:
-                            <ul class='browser-default' style='margin-top:-2px'>
-                                <li style='margin-top:-1px'><code>base</code> = usd</li>
-                            </ul>
-                            </p></div>
-                    </div>
-                </div>
-                <div id=Weather class='fill'>
-                    <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Weather</span>
-                            <p>Look up weather data for a location</p></div>
-                    </div>
-                    <hr/>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>stormrain</span>
-                            <p>A map of the amount of rain from the current storm<br>Usage: <code>,stormrain
-                                location</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>hourrain</span>
-                            <p>A map of the amount of rain from the last hour<br>Usage: <code>,hourrain location</code>
-                            </p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>radarloop</span>
-                            <p>Look up a looping radar<br>Usage: <code>,radarloop location</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>satellite</span>
-                            <p>Look up a current satellite image<br>Aliases: <code>radar</code><br>Usage: <code>,satellite
-                                location</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>wxraw</span>
-                            <p>View the raw data for a lat/long<br>Usage: <code>,wxraw location</code></p></div>
-                    </div>
-                    <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>wxhourly</span>
-                            <p>Look up an hourly forecast<br>Usage: <code>,wxhourly location</code></p></div>
                     </div>
                 </div>
             </div>
@@ -950,6 +1028,15 @@
                                 <li style='margin-top:-1px'><code>member</code> = None</li>
                             </ul>
                             </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>grab</span>
+                            <p>Catch currency<br>Usage: <code>,grab </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>gencur</span>
+                            <p>Turn currency generation for a channel on or off<br>Usage: <code>,gencur channel
+                                state</code><br>User Permissions Needed: Manage Server</p></div>
                     </div>
                 </div>
                 <div id=GlobalShop class='fill'>
@@ -1123,24 +1210,113 @@
                     </div>
                 </div>
             </div>
-            <div id="Utility_Config" class='fill'>
+            <div id="Bot_Utility_Config" class='fill'>
                 <ul class="tabs deep-purple darken-4 white-text center-align fill">
                     <li class="tab white-text fill"><a href="#Help" class="white-text">Help</a></li>
-                    <li class="tab white-text fill"><a href="#Guides" class="white-text">Guides</a></li>
+                    <li class="tab white-text fill"><a href="#GuildSettings" class="white-text">GuildSettings</a></li>
+                    <li class="tab white-text fill"><a href="#Bot" class="white-text">Bot</a></li>
                 </ul>
-                <div id=Guides class='fill'>
+                <div id=Bot class='fill'>
                     <div class='card purple darken-4'>
-                        <div class='card-content white-text'><span class='card-title'>Guides</span>
-                            <p>Guides on how to use </p></div>
+                        <div class='card-content white-text'><span class='card-title'>Bot</span>
+                            <p>Commands having to do with the bot herself</p></div>
                     </div>
                     <hr/>
                     <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>permguide</span>
-                            <p>Shows the permission guide<br>Usage: <code>,permguide </code></p></div>
+                        <div class='card-content white-text'><span class='card-title'>stats</span>
+                            <p>Shows bot stats<br>Usage: <code>,stats </code></p></div>
                     </div>
                     <div class='card purple darken-2'>
-                        <div class='card-content white-text'><span class='card-title'>currencyguide</span>
-                            <p>Shows the currency guide<br>Usage: <code>,currencyguide </code></p></div>
+                        <div class='card-content white-text'><span class='card-title'>invite</span>
+                            <p>Gives a link to invite Aoi to your server<br>Usage: <code>,invite </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>ping</span>
+                            <p>Shows Aoi's latency to discord<br>Usage: <code>,ping </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>die</span>
+                            <p>Log Aoi out<br>Usage: <code>,die </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>flush</span>
+                            <p>Flush XP/Currency to database manually<br>Usage: <code>,flush </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>guildlist</span>
+                            <p>List servers the bot is part of<br>Usage: <code>,guildlist </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>guildinfo</span>
+                            <p>Basic information about a server the bot is on<br>Usage: <code>,guildinfo guild</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>commandstats</span>
+                            <p>Show most used commands<br>Usage: <code>,commandstats </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>setavatar</span>
+                            <p>Sets Aoi's avatar<br>Aliases: <code>setav</code><br>Usage: <code>,setavatar url</code>
+                            </p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>setname</span>
+                            <p>Sets Aoi's name<br>Aliases: <code>newname</code><br>Usage: <code>,setname name</code></p>
+                        </div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>shards</span>
+                            <p>Shows shard stats<br>Usage: <code>,shards </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>update</span>
+                            <p>Update Aoi from Github<br>Usage: <code>,update </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>restart</span>
+                            <p>Restart Aoi<br>Usage: <code>,restart </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>reloadshard</span>
+                            <p>Reload a shard - **Might have strange side effects**<br>Usage: <code>,reloadshard
+                                shard</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>placeholders</span>
+                            <p>Shows the list of placeholders<br>Usage: <code>,placeholders </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>sqlexec</span>
+                            <p>Runs an SQL command<br>Usage: <code>,sqlexec sql</code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>sqlselect</span>
+                            <p>Runs an SQL select command<br>Usage: <code>,sqlselect sql</code></p></div>
+                    </div>
+                </div>
+                <div id=GuildSettings class='fill'>
+                    <div class='card purple darken-4'>
+                        <div class='card-content white-text'><span class='card-title'>GuildSettings</span>
+                            <p>Change and view 's configuration in your server</p></div>
+                    </div>
+                    <hr/>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>prefix</span>
+                            <p>Set Aoi's prefix<br>Usage: <code>,prefix &lt;prefix&gt;</code><br>Defaults:
+                            <ul class='browser-default' style='margin-top:-2px'>
+                                <li style='margin-top:-1px'><code>prefix</code> = None</li>
+                            </ul>
+                            <br>User Permissions Needed: Manage Server</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>config</span>
+                            <p>Set server config<br>Usage: <code>,config setting value</code><br>User Permissions
+                                Needed: Manage Server</p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>configs</span>
+                            <p>Lists current configs for the server.<br>Usage: <code>,configs </code></p></div>
                     </div>
                 </div>
                 <div id=Help class='fill'>
@@ -1168,25 +1344,16 @@
                             </ul>
                             </p></div>
                     </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>permguide</span>
+                            <p>Shows the permission guide<br>Usage: <code>,permguide </code></p></div>
+                    </div>
+                    <div class='card purple darken-2'>
+                        <div class='card-content white-text'><span class='card-title'>currencyguide</span>
+                            <p>Shows the currency guide<br>Usage: <code>,currencyguide </code></p></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div>
-</div>
-
-
-
-<footer class="black-text row ">
-    <div class="cols s6 left-align"></div>
-    <div class="cols s6 right-align switch">
-        <label class="black-text">
-            Dark Theme
-            <input type="checkbox" id="theme_selector" onchange="set_theme()">
-            <span class="lever"></span>
-        </label>
-    </div>
-</footer>
-</body>
-</html>
