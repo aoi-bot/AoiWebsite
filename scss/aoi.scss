@@ -1,0 +1,31 @@
+$primary: #6d30b8;
+$secondary: #52248c;
+$body-bg: #000;
+$body-color: #fff;
+
+$custom-colors: (
+        "discord": #7289DA,
+        "github": #222222,
+        "gitkraken": #155815
+);
+$custom-borders: (
+        "discord": #7289DA,
+        "github": #000,
+        "gitkraken": #155815
+);
+
+
+@import "../bootstrap/scss/bootstrap";
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@each $color, $value in $custom-colors {
+  .#{$color}-bg {
+    background-color: $value;
+    border-color: map-get($custom-borders, $color),;
+  }
+  .#{$color}-bg:hover {
+    background-color: darken($value, 10);
+    border-color: darken(map-get($custom-borders, $color), 10);
+  }
+}
