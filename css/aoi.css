@@ -10660,4 +10660,8 @@ textarea.form-control-lg {
   border-color: #0b2f0b;
 }
 
+[data-bs-toggle=pill]:hover {
+  background-color: #25103f;
+}
+
 /*# sourceMappingURL=aoi.css.map */
