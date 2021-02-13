@@ -39,23 +39,16 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   background-color: $aoi;
 }
 
-code > a[data-bs-toggle=tooltip] {
+.argument {
   @extend .badge;
-  @extend .bg-info;
   text-decoration: none;
   text-underline-style: none;
 }
-.argument.default {
-  @extend .badge;
-  text-decoration: none;
-  text-underline-style: none;
+.default {
   background-color: #0a3622;
   color: white;
 }
-.argument.required {
-  @extend .badge;
-  text-decoration: none;
-  text-underline-style: none;
+.required {
   background-color: #1aa179;
   color: black;
 }

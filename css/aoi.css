@@ -4541,7 +4541,7 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0.2rem;
 }
 
-.badge, .argument.required, .argument.default, code > a[data-bs-toggle=tooltip] {
+.badge, .argument {
   display: inline-block;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
@@ -4553,11 +4553,11 @@ textarea.form-control-lg {
   vertical-align: baseline;
   border-radius: 0.25rem;
 }
-.badge:empty, .argument.required:empty, .argument.default:empty, code > a[data-bs-toggle=tooltip]:empty {
+.badge:empty, .argument:empty {
   display: none;
 }
 
-.btn .badge, .btn .argument.required, .btn .argument.default, .btn code > a[data-bs-toggle=tooltip] {
+.btn .badge, .btn .argument {
   position: relative;
   top: -1px;
 }
@@ -7174,7 +7174,7 @@ textarea.form-control-lg {
   background-color: #198754 !important;
 }
 
-.bg-info, code > a[data-bs-toggle=tooltip] {
+.bg-info {
   background-color: #266e7c !important;
 }
 
@@ -10668,21 +10668,17 @@ textarea.form-control-lg {
   background-color: #1e0d2c;
 }
 
-code > a[data-bs-toggle=tooltip] {
+.argument {
   text-decoration: none;
   text-underline-style: none;
 }
 
-.argument.default {
-  text-decoration: none;
-  text-underline-style: none;
+.default {
   background-color: #0a3622;
   color: white;
 }
 
-.argument.required {
-  text-decoration: none;
-  text-underline-style: none;
+.required {
   background-color: #1aa179;
   color: black;
 }
