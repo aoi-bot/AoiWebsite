@@ -1,6 +1,7 @@
 $primary: #6d30b8;
 $secondary: #52248c;
-$body-bg: #000;
+$aoi: #1e0d2c;
+$body-bg: $aoi;
 $body-color: #fff;
 
 $custom-colors: (
@@ -32,4 +33,29 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 [data-bs-toggle=pill]:hover {
   background-color: darken($primary, 30);
+}
+
+.bg-purple {
+  background-color: $aoi;
+}
+
+code > a[data-bs-toggle=tooltip] {
+  @extend .badge;
+  @extend .bg-info;
+  text-decoration: none;
+  text-underline-style: none;
+}
+.argument.default {
+  @extend .badge;
+  text-decoration: none;
+  text-underline-style: none;
+  background-color: #0a3622;
+  color: white;
+}
+.argument.required {
+  @extend .badge;
+  text-decoration: none;
+  text-underline-style: none;
+  background-color: #1aa179;
+  color: black;
 }
