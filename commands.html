@@ -154,6 +154,12 @@
                 </button>
 
                 <button class="nav-link my-1  text-white mobile-nav"
+                        data-bs-toggle="pill" data-bs-target="#v-pills-Polls"
+                        type="button" role="tab" aria-controls="v-pills-Polls" aria-selected="true">
+                        Polls
+                </button>
+
+                <button class="nav-link my-1  text-white mobile-nav"
                         data-bs-toggle="pill" data-bs-target="#v-pills-Profile"
                         type="button" role="tab" aria-controls="v-pills-Profile" aria-selected="true">
                         Profile
@@ -193,12 +199,6 @@
                         data-bs-toggle="pill" data-bs-target="#v-pills-ServerShop"
                         type="button" role="tab" aria-controls="v-pills-ServerShop" aria-selected="true">
                         ServerShop
-                </button>
-
-                <button class="nav-link my-1  text-white mobile-nav"
-                        data-bs-toggle="pill" data-bs-target="#v-pills-TBHK"
-                        type="button" role="tab" aria-controls="v-pills-TBHK" aria-selected="true">
-                        TBHK
                 </button>
 
                 <button class="nav-link my-1  text-white mobile-nav"
@@ -335,6 +335,12 @@
                 </button>
 
                 <button class="nav-link my-1  text-white"
+                        data-bs-toggle="pill" data-bs-target="#v-pills-Polls"
+                        type="button" role="tab" aria-controls="v-pills-Polls" aria-selected="true">
+                        Polls
+                </button>
+
+                <button class="nav-link my-1  text-white"
                         data-bs-toggle="pill" data-bs-target="#v-pills-Profile"
                         type="button" role="tab" aria-controls="v-pills-Profile" aria-selected="true">
                         Profile
@@ -374,12 +380,6 @@
                         data-bs-toggle="pill" data-bs-target="#v-pills-ServerShop"
                         type="button" role="tab" aria-controls="v-pills-ServerShop" aria-selected="true">
                         ServerShop
-                </button>
-
-                <button class="nav-link my-1  text-white"
-                        data-bs-toggle="pill" data-bs-target="#v-pills-TBHK"
-                        type="button" role="tab" aria-controls="v-pills-TBHK" aria-selected="true">
-                        TBHK
                 </button>
 
                 <button class="nav-link my-1  text-white"
@@ -1274,24 +1274,6 @@
               Usage: <code>,tictactoe </code>
            </div>
            
-           
-       </div>
-   </div>
-</div>
-
-<div class="card bg-dark my-1 mx-1">
-    <div class="card-body">
-        <h5 class="card-title"><code>,rps</code></h5>
-        <h6 class="card-subtitle text-muted">Play rock paper scissors, with an optional amount of turns</h6>
-        <div class="card-text">
-           
-           <div>
-              Usage: <code>,rps <span data-bs-toggle="tooltip" data-bs-placement="top" href="#" data-bs-html="true" 
-                title="Type: <code>int</code><br/>Default: <code>3</code><br/>Optional" 
-                class="argument default">
-                &lt;turns&gt;</span></code>
-           </div>
-           <div>Flags:<ul><li><code>--bet [int]</code> Amount to bet</ul></div>
            
        </div>
    </div>
@@ -2748,6 +2730,31 @@
 
                 </div>
             
+                <div class="tab-pane fade my-3 mx-4   text-white" id="v-pills-Polls" 
+                    role="tabpanel" aria-labelledby="v-pills-Polls-tab">
+                    <h2 class="mx-2 my-2">Polls</h2>
+                    <h4 class="mx-2 my-2">Polls</h4>
+                    
+<div class="card bg-dark my-1 mx-1">
+    <div class="card-body">
+        <h5 class="card-title"><code>,poll</code></h5>
+        <h6 class="card-subtitle text-muted">Starts a poll</h6>
+        <div class="card-text">
+           
+           <div>
+              Usage: <code>,poll <span data-bs-toggle="tooltip" data-bs-placement="top" href="#" data-bs-html="true" 
+                title="Type: <code>str</code>" 
+                class="argument required">
+                content</span></code>
+           </div>
+           
+           
+       </div>
+   </div>
+</div>
+
+                </div>
+            
                 <div class="tab-pane fade my-3 mx-4   text-white" id="v-pills-Profile" 
                     role="tabpanel" aria-labelledby="v-pills-Profile-tab">
                     <h2 class="mx-2 my-2">Profile</h2>
@@ -3400,6 +3407,24 @@
    </div>
 </div>
 
+<div class="card bg-dark my-1 mx-1">
+    <div class="card-body">
+        <h5 class="card-title"><code>,rps</code></h5>
+        <h6 class="card-subtitle text-muted">Play rock paper scissors, with an optional amount of turns</h6>
+        <div class="card-text">
+           
+           <div>
+              Usage: <code>,rps <span data-bs-toggle="tooltip" data-bs-placement="top" href="#" data-bs-html="true" 
+                title="Type: <code>int</code><br/>Default: <code>3</code><br/>Optional" 
+                class="argument default">
+                &lt;turns&gt;</span></code>
+           </div>
+           <div>Flags:<ul><li><code>--bet [int]</code> Amount to bet</ul></div>
+           
+       </div>
+   </div>
+</div>
+
                 </div>
             
                 <div class="tab-pane fade my-3 mx-4   text-white" id="v-pills-ServerShop" 
@@ -3521,13 +3546,6 @@
    </div>
 </div>
 
-                </div>
-            
-                <div class="tab-pane fade my-3 mx-4   text-white" id="v-pills-TBHK" 
-                    role="tabpanel" aria-labelledby="v-pills-TBHK-tab">
-                    <h2 class="mx-2 my-2">TBHK</h2>
-                    <h4 class="mx-2 my-2">TBHK things, cuz Aoi</h4>
-                    
                 </div>
             
                 <div class="tab-pane fade my-3 mx-4   text-white" id="v-pills-TaskManagement" 
@@ -4017,24 +4035,6 @@
                 title="Type: <code>str</code>" 
                 class="argument required">
                 formula</span></code>
-           </div>
-           
-           
-       </div>
-   </div>
-</div>
-
-<div class="card bg-dark my-1 mx-1">
-    <div class="card-body">
-        <h5 class="card-title"><code>,poll</code></h5>
-        <h6 class="card-subtitle text-muted">Starts a poll</h6>
-        <div class="card-text">
-           
-           <div>
-              Usage: <code>,poll <span data-bs-toggle="tooltip" data-bs-placement="top" href="#" data-bs-html="true" 
-                title="Type: <code>str</code>" 
-                class="argument required">
-                content</span></code>
            </div>
            
            
