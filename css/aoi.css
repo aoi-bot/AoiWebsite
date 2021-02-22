@@ -219,6 +219,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 pre,
 code,
+[code],
 kbd,
 samp {
   font-family: var(--bs-font-monospace);
@@ -234,18 +235,18 @@ pre {
   overflow: auto;
   font-size: 0.875em;
 }
-pre code {
+pre code, pre [code] {
   font-size: inherit;
   color: inherit;
   word-break: normal;
 }
 
-code {
+code, [code] {
   font-size: 0.875em;
   color: #d63384;
   word-wrap: break-word;
 }
-a > code {
+a > code, a > [code] {
   color: inherit;
 }
 
@@ -4652,12 +4653,12 @@ textarea.form-control-lg {
   color: #4f5050;
 }
 
-.alert-dark {
+.alert-dark, .alert-xdark {
   color: #141619;
   background-color: #d3d3d4;
   border-color: #bcbebf;
 }
-.alert-dark .alert-link {
+.alert-dark .alert-link, .alert-xdark .alert-link {
   color: #101214;
 }
 
@@ -10681,6 +10682,11 @@ textarea.form-control-lg {
 .required {
   background-color: #1aa179;
   color: black;
+}
+
+.alert-xdark {
+  background-color: #222;
+  color: white;
 }
 
 /*# sourceMappingURL=aoi.css.map */

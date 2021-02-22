@@ -52,3 +52,13 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   background-color: #1aa179;
   color: black;
 }
+
+.alert-xdark {
+  @extend .alert-dark;
+  background-color: #222;
+  color: white;
+}
+
+[code] {
+  @extend code;
+}
