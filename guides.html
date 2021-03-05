@@ -152,7 +152,8 @@
             <li>
                 <p>
                     Extended colors
-                    <a data-bs-toggle="collapse" href="#colors" role="button" aria-expanded="false" aria-controls="colors">Expand color list</a>
+                    <a data-bs-toggle="collapse" href="#colors" role="button" aria-expanded="false"
+                       aria-controls="colors">Expand color list</a>
                 </p>
                 <p>
                 <div class="collapse" id="colors">
@@ -170,6 +171,130 @@
             </li>
         </ul>
     </div>
+
+    <div id="selfhosting">
+        <h2>I want to host my own copy of Aoi! How can I do that?</h2>
+        <p>As of the writing of this guide, the selfhost script for Aoi is a WIP, but you can still selfhost by
+            following the directions below</p>
+        <h4>Install prerequisites</h4>
+        <p>You need to be running at least Python 3.7 to run Aoi.</p>
+        <ul>
+            <li>For Windows, MacOS, and Linux machines with a GUI, you can get python from <a
+                    href="https://www.python.org/downloads/release/python-392/">here</a></li>
+            <li>For Linux machines without a GUI:
+                <ul>
+                    <li>Debian/Ubuntu - <code>sudo apt install python3</code></li>
+                    <li>OpenSUSE Leap - <code>sudo zypper in python3</code></li>
+                </ul>
+            </li>
+        </ul>
+        <p>You also need git</p>
+        <ul>
+            <li>For Windows and MacOS, you can get git from <a href="https://git-scm.com/downloads">here</a></li>
+            <li>For Linux, install via your package manager
+                <ul>
+                    <li>Debian/Ubuntu - <code>sudo apt install git redis</code></li>
+                    <li>OpenSUSE Leap - <code>sudo zypper in git redis</code></li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Downloading Aoi</h4>
+        <p>Once you have Python and git installed, you can download Aoi from github by running the following
+            commands</p>
+        <pre class="d-block">
+            git clone https://github.com/aoi-bot/Aoi.git
+            cd Aoi
+            git submodule init
+            git submodule update
+        </pre>
+        <h4>Setting up a virtual environment</h4>
+        <p>Run the following commands to install venv and activate the virtual environment where you'll be installing
+            Aoi's dependencies</p>
+        <ul>
+            <li>
+                Windows
+                <pre class="d-block">
+    py -m pip install --user virtualenv
+    py -m venv venv
+    .\venv\Scripts\activate
+                </pre>
+            </li>
+            <li>
+                Linux/Mac
+                <pre class="d-block">
+    python3 -m pip install --user virtualenv
+    python3 -m venv venv
+    source venv/bin/activate
+                </pre>
+            </li>
+        </ul>
+        <h4>Next, install the prerequisites Aoi needs</h4>
+        <pre>
+    pip install -U -r requirements.txt
+        </pre>
+        <h4>Set up your <code>.env</code> file</h4>
+        <ul>
+            <li>Make a copy of the file named <code>.env-example</code> in the <code>Aoi</code> folder. Name it <code>.env</code></li>
+            <li>Open the file in a text editor</li>
+        </ul>
+        Fill out the <code>.env</code> file. An explanation of each key is below
+        <ul>
+            <li><code>TOKEN</code> - this is your bot's token. You can use <a href="https://discordpy.readthedocs.io/en/latest/discord.html">this guide</a>
+            to show you how to make a bot account
+                <div class="alert alert-xdark">
+                    This is the <i>only</i> required API key or token. The rest that follow are for using specific commands or groups of commands in Aoi.
+                </div>
+            </li>
+
+            <li><code>WEATHER_GOV_API</code> - according to weather.gov, this should be something that uniquely identifies your application. Used for
+            weather related commands</li>
+
+            <li><code>GOOGLE_API_KEY</code> - used for the geolocation commands. See <a href="https://developers.google.com/maps/documentation/geocoding/get-api-key">
+                Google's documentation on how to get your key and activate it</a> </li>
+
+            <li><code>NASA</code> - used for LANDSAT and APOD commands. See <a href="https://api.nasa.gov/">api.nasa.gov</a> for information on how to
+            get your key</li>
+
+            <li><code>IMGUR</code> and <code>IMGUR_SECRET</code> - used for imgur command. See <a href="https://apidocs.imgur.com/">Imgur's site</a>
+            for documentation on how to get your key</li>
+
+            <li><code>PATREON_ID</code> and <code>PATREON_SECRET</code> - set these if you want to allow users to get global currency for donating to your
+            patreon. See <a href="https://forum.idunetwork.eu.org/topic/10-get-your-patreon-campaignid/">this</a> tutorial to get them</li>
+        </ul>
+
+        <div class="alert alert-danger">
+            <b>These keys are the equivalent of your password for the services they belong to.</b> Posting these keys let someone make requests as you, so
+            treat them as securely as your own password.
+        </div>
+
+        <h4>Start Aoi</h4>
+        To start Aoi, simply run <code>python main.py</code>
+        <div class="alert-xdark alert">
+            If you close the window you're currently running the bot in, or disconnect from your VPS, the bot will go offline. Either leave the window open or
+            use a session/process manager like pm2, tmux, or screen. While I won't add instructions for them all here, feel free to come to
+            the <a href="https://discord.gg/zRvNtXFWeS">Support Discord</a> for help.
+        </div>
+
+        <h4>Updating Aoi</h4>
+        <ol>
+            <li>Stop the bot</li>
+            <li>Reactivate your virtualenv if you have to
+                <ul>
+                    <li>Windows - <code>.\venv\Scripts\activate</code></li>
+                    <li>Linux/MacOS - <code>source venv/bin/activate</code></li>
+                </ul>
+            </li>
+            <li>
+                Update the bot with <code>git pull --recurse-submodules</code>
+            </li>
+            <li>
+                Make sure your dependencies are up to date with <code>pip install -U -r requirements.txt</code>
+            </li>
+            <li>
+                Start the bot, as above
+            </li>
+        </ol>
+    </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
@@ -185,7 +310,6 @@
             document.getElementById('toc').innerHTML += `<a class="d-block" href="#${element.parentElement.id}">${element.innerHTML}</a>`;
             element.innerHTML += '<sup><a class="px-2" href="#toc">Top</a></sup><br/>';
         })
-
 
 
     webColors = ["MediumVioletRed", "DeepPink", "PaleVioletRed", "HotPink", "LightPink", "Pink", "DarkRed", "Red",
@@ -209,7 +333,7 @@
     elements = [1, 2, 3, 4].map(index => document.getElementById(`color${index}`))
 
     for (let i = 0; i < webColors.length; i++) {
-        elements[i%4].innerHTML += `<p><button type="button" class="btn" style="background-color:${webColors[i]}">&nbsp;&nbsp;&nbsp;</button> ${webColors[i].toLowerCase()}</p>`
+        elements[i % 4].innerHTML += `<p><button type="button" class="btn" style="background-color:${webColors[i]}">&nbsp;&nbsp;&nbsp;</button> ${webColors[i].toLowerCase()}</p>`
     }
 
 

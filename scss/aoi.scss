@@ -62,3 +62,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 [code] {
   @extend code;
 }
+
+pre {
+  @extend code;
+}

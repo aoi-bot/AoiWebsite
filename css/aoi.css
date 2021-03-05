@@ -235,18 +235,18 @@ pre {
   overflow: auto;
   font-size: 0.875em;
 }
-pre code, pre [code] {
+pre code, pre pre, pre [code] {
   font-size: inherit;
   color: inherit;
   word-break: normal;
 }
 
-code, [code] {
+code, pre, [code] {
   font-size: 0.875em;
   color: #d63384;
   word-wrap: break-word;
 }
-a > code, a > [code] {
+a > code, a > pre, a > [code] {
   color: inherit;
 }
 
